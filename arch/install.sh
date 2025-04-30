@@ -347,6 +347,7 @@ dotfiles
 setup_gtk
 setup_searxng
 isolate_user_only_packages
+$CHROOT mkinitcpio -P
 # Save any logs
 cp -v "*.log" /mnt
 reboot
