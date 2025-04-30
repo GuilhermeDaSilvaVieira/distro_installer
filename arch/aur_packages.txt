@@ -24,6 +24,7 @@ basedpyright
 # Theme
 nordic-bluish-accent-theme
 nordzy-cursors
+tty-colorscheme
 
 # Fonts
 ttf-ms-win11-auto

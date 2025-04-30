@@ -133,13 +133,17 @@ create_user() {
 }
 
 systems() {
-    # Enable internet, VM, Printing, Bluetooth, System Backup
-    for system in NetworkManager libvirtd cups bluetooth timeshift;
+    # Enable internet, VM, Printing, Bluetooth, TTY Colorscheme
+    for system in NetworkManager libvirtd cups bluetooth tty-colorscheme;
     do
         $CHROOT systemctl enable $system
     done
     # Enable syncthing for robin user
     $CHROOT systemctl enable syncthing@robin.service
+}
+
+change_tty_colorscheme() {
+    echo 'colorscheme="cobalt-2"' > /mnt/etc/tty-colorscheme/tty-colorscheme.conf
 }
 
 zram() {
@@ -312,6 +316,7 @@ $CHROOT chsh -s /bin/fish
 bootloader
 create_user
 systems
+change_tty_colorscheme
 zram
 # Root password
 echo root:$PASSWORD >> passwords.txt
