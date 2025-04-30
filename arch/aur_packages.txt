@@ -1,11 +1,32 @@
+# WM
 awesome-git
-librewolf-bin
+eww
+
+# Trading
 tradingview
-fastfetch
+
+# Printing Driver
 epson-inkjet-printer-escpr
-mangal-bin
-xpadneo-dkms-git
-cava
-mangohud
-ani-cli-git
-nerd-fonts-meta
+
+# Boot
+systemd-boot-pacman-hook
+
+# Browser
+zen-browser-bin
+tor-browser-bin
+ungoogled-chromium-bin
+
+# Programming
+android-studio
+visual-studio-code-bin
+basedpyright
+
+# Theme
+nordic-bluish-accent-theme
+nordzy-cursors
+
+# Disk
+udevil-git
+
+# Fonts
+ttf-ms-win11-auto
