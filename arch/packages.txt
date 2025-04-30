@@ -54,6 +54,7 @@ cups
 
 # Disk
 udisks2
+gdu
 
 # Searxng
 docker
