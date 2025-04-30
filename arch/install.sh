@@ -140,6 +140,17 @@ systems() {
     done
     # Enable syncthing for robin user
     $CHROOT systemctl enable syncthing@robin.service
+
+    # Enable devmon
+    echo '[Unit]' >> /mnt/etc/systemd/system/devmon.service
+    echo 'Description=Automatically mount devices on plug' >> /mnt/etc/systemd/system/devmon.service
+    echo '' >> /mnt/etc/systemd/system/devmon.service
+    echo '[Service]' >> /mnt/etc/systemd/system/devmon.service
+    echo 'ExecStart=/usr/bin/devmon' >> /mnt/etc/systemd/system/devmon.service
+    echo '' >> /mnt/etc/systemd/system/devmon.service
+    echo '[Install]' >> /mnt/etc/systemd/system/devmon.service
+    echo 'WantedBy=multi-user.target' >> /mnt/etc/systemd/system/devmon.service
+    $CHROOT systemctl enable devmon.service
 }
 
 zram() {
